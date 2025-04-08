@@ -1,0 +1,530 @@
+header {
+    background-color: rgb(255, 193, 193);
+    color: rgb(255, 255, 255);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    justify-content: space-between; /* Isso mantém o logo à esquerda e o resto à direita */
+    top: 0;
+    z-index: 100;
+    height: 120px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Espaço entre o menu e o carrinho */
+}
+
+   .logo img{
+    max-width: 215px; /* Define a largura máxima */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+footer {
+    background-color: rgb(255, 193, 193);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    position: static;
+    top: 0;
+    
+}
+
+main h2 {
+    font-family: Horizon;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+@font-face {
+    font-family: 'Horizon';
+    src: url('/assets/horizon.otf') format('opentype');
+    font-weight: bold;
+}
+
+.menu ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: Horizon;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: hotpink;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+    
+}
+
+
+
+.card {
+    width: 18rem;
+    margin: 1rem;
+    border: 1px solid rgb(255, 193, 193);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(255, 193, 193);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #ffffff; /* Cor de fundo para os espaços vazios */
+    padding: 10px; /* Espaço interno para não colar nas bordas */
+    border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgb(255, 193, 193);
+}
+
+
+
+
+.btn.btn-dark {
+    background-color: rgb(255, 193, 193)!important; /* Cor rosa claro */
+    color: rgb(0, 0, 0)!important; /* Texto preto para melhor contraste */
+    border: none!important;
+    padding: 0.5rem 1rem!important;
+    border-radius: 5px!important;
+    transition: background-color 0.3s!important; /* Adiciona transição suave */
+}
+
+.btn-dark:hover {
+    background-color: rgb(255, 160, 160)!important; /* Cor um pouco mais escura no hover */
+    color: rgb(0, 0, 0)!important; /* Mantém o texto preto */
+}
+
+
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 12px;
+}
+
+/* Efeito Hover no ícone do carrinho */
+.cart-icon img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cart-icon:hover img {
+    transform: scale(1.1); /* Aumenta o ícone um pouco */
+    filter: brightness(1.2); /* Aumenta o brilho do ícone */
+}
+
+/* Estilos do Carrinho */
+.carrinho {
+    position: fixed;
+    top: 0;
+    right: -350px; /* Começa fora da tela */
+    width: 350px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -4px 0 15px rgba(255, 143, 143, 0.3);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow-y: auto;
+    border-left: 1px solid #ffc1c1;
+    transition: right 0.3s ease-in-out;
+    background-color: #fff9f9;
+}
+
+.carrinho.aberto {
+    right: 0;
+}
+
+.btn-fechar-carrinho {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ff6b6b;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 10;
+}
+
+.btn-fechar-carrinho:hover {
+    color: #ff3b3b;
+    transform: scale(1.1);
+}
+
+.carrinho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ffc1c1;
+    margin-bottom: 1rem;
+}
+
+.carrinho-header h3 {
+    color: #ff8f8f;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.carrinho-header .btn-close {
+    font-size: 1.5rem;
+    color: #ff8f8f;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.carrinho-header .btn-close:hover {
+    color: #ff6b6b;
+    transform: rotate(90deg);
+}
+
+.carrinho-items {
+    max-height: calc(100vh - 250px); /* Garante que não ultrapasse a tela */
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.carrinho-item {
+    display: grid;
+    grid-template-columns: 60px 1fr; /* Coluna para imagem e outra para info */
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ffecec;
+    align-items: start; /* Alinha no topo */
+}
+
+.carrinho-item-img {
+    width: 60px; /* Reduzi mais um pouco */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ffdada;
+    box-shadow: 0 2px 4px rgba(255, 143, 143, 0.1);
+}
+
+.carrinho-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.carrinho-item-nome {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+.carrinho-item-preco {
+    font-size: 0.9rem;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.carrinho-item-quantidade {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.carrinho-item-quantidade button {
+    background-color: #ffc1c1;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrinho-item-quantidade button:hover {
+    background-color: #ff8f8f;
+}
+
+.carrinho-item-remover {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.carrinho-footer {
+    padding-top: 1rem;
+    border-top: 1px solid #ffc1c1;
+}
+
+.carrinho-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.carrinho-total-valor {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.carrinho-botao-finalizar {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #ff8f8f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carrinho-botao-finalizar:hover {
+    background-color: #ff6b6b;
+}
+
+/* Carrinho vazio */
+.carrinho-vazio {
+    text-align: center;
+    color: #888;
+    padding: 2rem 0;
+}
+
+.carrinho-vazio i {
+    font-size: 2rem;
+    color: #ffc1c1;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.carrinho-fechar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ff6b6b;
+    background: none;
+    color: #ff6b6b;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+.carrinho-fechar:hover {
+    background-color: #ff6b6b;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+
+.carrossel {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 300px; /* altura razoável */
+    overflow: hidden;
+}
+
+.carrossel-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: #fff9f9; /* opcional: pra suavizar o fundo se tiver bordas */
+}
+
+
+
+.carrossel-slide {
+    display: none;
+    width: 100%;
+}
+
+.carrossel-slide.ativo {
+    display: block;
+}
+
+.carrossel-slide img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carrossel-btn.anterior {
+    left: 10px;
+}
+
+.carrossel-btn.proximo {
+    right: 10px;
+}
+
+.indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicador {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicador.ativo {
+    background-color: #333;
+}
+
+
+/* Estilos para as tabs de gêneros */
+.nav-tabs {
+    border-bottom: 2px solid #ffc1c1;
+}
+
+.nav-tabs .nav-link {
+    color: #ff8f8f;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+    color: #ff6b6b;
+    background-color: #fff9f9;
+    border-bottom: 3px solid #ff6b6b;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+    color: #ff6b6b;
+    background-color: rgba(255, 193, 193, 0.1);
+}
+
+.tab-content {
+    padding: 1.5rem 0;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  /* 3 cards por linha */
+  .card {
+    flex: 0 0 calc(33.333% - 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 300px;
+  }
+  
+  /* Esticar conteúdo da parte de baixo */
+  .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-body .btn-dark {
+    margin-top: auto;
+  }
+  
