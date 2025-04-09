@@ -2,6 +2,7 @@ let carrinho = [];
 const carrinhoSalvo = localStorage.getItem('carrinho');
 if (carrinhoSalvo) {
     carrinho = JSON.parse(carrinhoSalvo);
+    
 }
 let produtos = [
     { nome: "Tokyo Ghoul RE 1", genero: "Ação", subgenero: "Terror", preco: "R$ 30,00", imagem: "img/TokyoGuruRE.jpg", id: 1 },
@@ -10,12 +11,35 @@ let produtos = [
     { nome: "Chainsaw Man 1", genero: "Ação", subgenero: "Suspense", preco: "R$ 40,00", imagem: "img/Chainsaw1.jpg", id: 4 },
     { nome: "Boa Noite Punpun 1", genero: "Drama", subgenero: "Slice of Life", preco: "R$ 40,00", imagem: "img/punpun1.jpg", id: 5 },
     { nome: "Banana Fish 1", genero: "Drama", subgenero: "Suspense", preco: "R$ 40,00", imagem: "img/bananafish1.jpg", id: 6 },
-    { nome: "Soul Eater 1", genero: "Ação", subgenero: "Paranormal", preco: "R$ 40,00", imagem: "img/souleater1.jpg", id: 6 },
+    { nome: "Soul Eater Perferct Edition 1", genero: "Ação", subgenero: "Paranormal", preco: "R$ 40,00", imagem: "img/souleater1.jpg", id: 6 },
     { nome: "Dungeon Meshi 1", genero: "Fantasia", subgenero: "Comédia", preco: "R$ 40,00", imagem: "img/dungeonmeshi1.jpg", id: 6 },
     { nome: "Burn The Witch 1", genero: "Fantasia", subgenero: "Ação", preco: "R$ 40,00", imagem: "img/burnthewitch1.jpg", id: 6 },
     { nome: "O Cara Que Estou Afim Não É Um Cara 1", genero: "Slice of Life", subgenero: "Romance", preco: "R$ 40,00", imagem: "img/ocara1.jpg", id: 6 },
     { nome: "Komi-san Não Consegue Se Comunicar 1", genero: "Slice of Life", subgenero: "Comédia", preco: "R$ 40,00", imagem: "img/komisan.jpg", id: 6 },
-    { nome: "Minha Adoravel Cosplayer 1", genero: "Slice of Life", subgenero: "Romance", preco: "R$ 40,00", imagem: "img/sono1.jpg", id: 6 }
+    { nome: "Minha Adoravel Cosplayer 1", genero: "Slice of Life", subgenero: "Romance", preco: "R$ 40,00", imagem: "img/sono1.jpg", id: 6 },
+    { nome: "Tokyo Ghoul RE 11", genero: "Ação", subgenero: "Terror", preco: "R$ 30,00", imagem: "img/TokyoGuruRE11.jpg", id: 1 },
+    { nome: "Neon Genesis Evangelion 4", genero: "Drama", subgenero: "Mecha", preco: "R$ 40,00", imagem: "img/Evangelion4.jpg", id: 3 },
+    { nome: "Neon Genesis Evangelion 7", genero: "Drama", subgenero: "Mecha", preco: "R$ 40,00", imagem: "img/Evangelion7.jpg", id: 3 },
+    { nome: "Tokyo Ghoul RE 16", genero: "Ação", subgenero: "Terror", preco: "R$ 30,00", imagem: "img/TokyoGuruRE16.jpg", id: 1 },
+    { nome: "Minha Adoravel Cosplayer 4", genero: "Slice of Life", subgenero: "Romance", preco: "R$ 40,00", imagem: "img/sono4.jpg", id: 6 },
+    { nome: "Banana Fish 10", genero: "Drama", subgenero: "Suspense", preco: "R$ 40,00", imagem: "img/bananafish10.jpg", id: 6 },
+    { nome: "Boa Noite Punpun 5", genero: "Drama", subgenero: "Slice of Life", preco: "R$ 40,00", imagem: "img/punpun5.jpg", id: 5 },
+    { nome: "Dungeon Meshi 4", genero: "Fantasia", subgenero: "Comédia", preco: "R$ 40,00", imagem: "img/dungeonmeshi4.jpg", id: 6 },
+    { nome: "Chainsaw Man 5", genero: "Ação", subgenero: "Suspense", preco: "R$ 40,00", imagem: "img/Chainsaw5.jpg", id: 4 },
+    { nome: "Sakura Card Captor 6", genero: "Fantasia", subgenero: "Romance", preco: "R$ 33,90", imagem: "img/SakuraCardCaptor6.jpg", id: 2 },
+    { nome: "Soul Eater Perferct Edition 5", genero: "Ação", subgenero: "Paranormal", preco: "R$ 40,00", imagem: "img/souleater5.jpg", id: 6 },
+    { nome: "Komi-san Não Consegue Se Comunicar 11", genero: "Slice of Life", subgenero: "Comédia", preco: "R$ 40,00", imagem: "img/komisan11.jpg", id: 6 },
+    { nome: "Banana Fish 4", genero: "Drama", subgenero: "Suspense", preco: "R$ 40,00", imagem: "img/bananafish4.jpg", id: 6 },
+    { nome: "Sakura Card Captor 3", genero: "Fantasia", subgenero: "Romance", preco: "R$ 33,90", imagem: "img/SakuraCardCaptor3.jpg", id: 2 },
+    { nome: "Soul Eater Perferct Edition 7", genero: "Ação", subgenero: "Paranormal", preco: "R$ 40,00", imagem: "img/souleater7.jpg", id: 6 },
+    { nome: "Chainsaw Man 3", genero: "Ação", subgenero: "Suspense", preco: "R$ 40,00", imagem: "img/Chainsaw3.jpg", id: 4 },
+    { nome: "Boa Noite Punpun 7", genero: "Drama", subgenero: "Slice of Life", preco: "R$ 40,00", imagem: "img/punpun7.jpg", id: 5 },
+    { nome: "Dungeon Meshi 4", genero: "Fantasia", subgenero: "Comédia", preco: "R$ 40,00", imagem: "img/dungeonmeshi11.jpg", id: 6 },
+    { nome: "Komi-san Não Consegue Se Comunicar 25", genero: "Slice of Life", subgenero: "Comédia", preco: "R$ 40,00", imagem: "img/komisan25.jpg", id: 6 },
+    { nome: "Minha Adoravel Cosplayer 7", genero: "Slice of Life", subgenero: "Romance", preco: "R$ 40,00", imagem: "img/sono7.jpg", id: 6 },
+    { nome: "Tomie Complete Deluxe Edition", genero: "Terror", subgenero: "Suspense", preco: "R$ 40,00", imagem: "img/Tomie.jpg", id: 6 }
+    
+
 ];
 
 // Função para normalizar os gêneros
@@ -305,3 +329,126 @@ if (carrinhoSalvo) {
 }
 
 
+//Barra de pesquisa
+function filtrarProdutos(termo) {
+    termo = termo.toLowerCase().trim();
+    
+    // Mostra todos os containers de gênero
+    document.querySelectorAll('.tab-pane').forEach(tab => {
+        tab.style.display = '';
+    });
+    
+    if (!termo) {
+        // Se a pesquisa estiver vazia, mostra todos os produtos normalmente
+        carregarProdutos();
+        return;
+    }
+    
+    // Filtra os produtos
+    const produtosFiltrados = produtos.filter(produto => 
+        produto.nome.toLowerCase().includes(termo)
+    );
+    
+    // Esconde todas as tabs de gênero
+    document.querySelectorAll('.tab-pane:not(#todos)').forEach(tab => {
+        tab.style.display = 'none';
+    });
+    
+    // Renderiza os produtos filtrados na tab "todos"
+    renderizarProdutos(produtosFiltrados, 'produtos-container');
+    
+    // Atualiza os containers de gênero para os produtos filtrados
+    const generosUnicos = [...new Set(produtosFiltrados.map(p => p.genero))];
+    
+    generosUnicos.forEach(genero => {
+        const produtosGenero = produtosFiltrados.filter(p => p.genero === genero);
+        const containerId = `produtos-${normalizarGenero(genero)}`;
+        renderizarProdutos(produtosGenero, containerId);
+    });
+    
+    // Ativa a tab "todos" automaticamente
+    document.querySelector('#todos-tab').click();
+}
+
+// Modifique a função carregarProdutos para garantir que sempre mostre os containers
+function carregarProdutos() {
+    // Mostra todos os containers
+    document.querySelectorAll('.tab-pane').forEach(tab => {
+        tab.style.display = '';
+    });
+    
+    // 1. Carrega todos os produtos
+    renderizarProdutos(produtos, 'produtos-container');
+    
+    // 2. Identifica todos os gêneros únicos
+    const generosUnicos = [...new Set(produtos.map(p => p.genero))];
+    
+    // 3. Para cada gênero, filtra e renderiza os produtos
+    generosUnicos.forEach(genero => {
+        const produtosFiltrados = produtos.filter(p => p.genero === genero);
+        const containerId = `produtos-${normalizarGenero(genero)}`;
+        renderizarProdutos(produtosFiltrados, containerId);
+    });
+}
+
+// Atualize os event listeners da pesquisa
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    
+    // Pesquisa ao clicar no botão
+    searchButton.addEventListener('click', function() {
+        filtrarProdutos(searchInput.value);
+    });
+    
+    // Pesquisa ao pressionar Enter
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            filtrarProdutos(searchInput.value);
+        }
+    });
+    
+    // Limpa a pesquisa quando o input perde o foco e está vazio
+    searchInput.addEventListener('input', function() {
+        if (!searchInput.value.trim()) {
+            carregarProdutos();
+        }
+    });
+});
+
+function finalizarCompra() {
+    // Verifica se o carrinho está vazio
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio. Adicione itens antes de finalizar a compra.");
+        return;
+    }
+    
+    // Mostra o modal de confirmação
+    mostrarModalCompra();
+    
+    // Limpa o carrinho após a compra
+    carrinho = [];
+    localStorage.removeItem('carrinho');
+    atualizarCarrinho();
+    atualizarContadorCarrinho();
+    
+    // Fecha o carrinho automaticamente
+    fecharCarrinho();
+}
+
+// Funções para controlar o modal de confirmação
+function mostrarModalCompra() {
+    document.getElementById('modalCompraFinalizada').style.display = 'flex';
+}
+
+function fecharModalCompra() {
+    document.getElementById('modalCompraFinalizada').style.display = 'none';
+}
+
+// Fechar o modal se clicar fora do conteúdo
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('modalCompraFinalizada');
+    if (event.target === modal) {
+        fecharModalCompra();
+    }
+});

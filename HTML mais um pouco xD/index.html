@@ -15,6 +15,17 @@
         <div class="logo">
             <h1> <img src="img/logo.png" alt="Logo da Sakura Mangás"> </h1>
         </div>
+
+        <div class="search-bar mb-4">
+            <div class="input-group">
+                <input type="text" id="search-input" class="form-control" placeholder="Pesquisar mangás..." aria-label="Pesquisar mangás">
+            <button class="btn btn-outline-secondary" type="button" id="search-button">
+                <img src="img/search-icon.png" alt="Pesquisar" width="20">
+            </button>
+            </div>
+        </div>
+        
+
         <div class="header-content">
             <nav class="menu">
                 <ul>
@@ -23,6 +34,8 @@
                     <li><a href="produtos.html">Produtos</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                 </ul>
+
+                
             </nav>
             <div class="cart-icon" onclick="abrirCarrinho()">
                 <img src="img/shopping-cart (1).png" alt="Carrinho">
@@ -42,6 +55,15 @@
             <div class="carrossel-slide">
                 <img src="img/Carrossel3.png" alt="Banner 3" />
             </div>
+            <div class="carrossel-slide">
+                <img src="img/Carrossel4.png" alt="Banner 4" />
+            </div>
+            <div class="carrossel-slide">
+                <img src="img/Carrossel5.png" alt="Banner 5" />
+            </div>
+            <div class="carrossel-slide">
+                <img src="img/Carrossel6.png" alt="Banner 6" />
+            </div>
     
             <button class="carrossel-btn anterior">&#10094;</button>
             <button class="carrossel-btn proximo">&#10095;</button>
@@ -60,6 +82,8 @@
             <main>
                 <section id="produtos">
                     <h2 class="text-center mb-4">Nossos Mangás</h2>
+
+                    
                     
                     <!-- Adicione esta parte nova -->
                     <div class="filtro-generos mb-4">
@@ -106,8 +130,6 @@
             </main>
 
             
-
-            
         </section>
     </main>
 
@@ -123,6 +145,20 @@
     <div class="carrinho-footer">
         <h4>Total: R$ <span id="total-price">0.00</span></h4>
         <button class="btn btn-primary" onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+    </div>
+</div>
+
+<div id="modalCompraFinalizada" class="modal-compra">
+    <div class="modal-compra-conteudo">
+        <span class="modal-compra-fechar" onclick="fecharModalCompra()">&times;</span>
+        <div class="modal-compra-body">
+            <img src="img/checkmark.png" alt="Compra Confirmada" class="modal-compra-icon">
+            <h3>Compra Finalizada!</h3>
+            <p>Obrigado por sua compra na Sakura Mangás!</p>
+            <p>Seu pedido foi processado com sucesso.</p>
+            <button class="btn btn-primary" onclick="fecharModalCompra()">OK</button>
+        </div>
     </div>
 </div>
 
