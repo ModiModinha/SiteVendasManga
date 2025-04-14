@@ -383,10 +383,10 @@ main {
 
 .carrinho-fechar {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
     border: 2px solid #ff6b6b;
     background: none;
     color: #ff6b6b;
@@ -396,7 +396,6 @@ main {
     border-radius: 50%;
     cursor: pointer;
     display: flex;
-    align-items: center;
     justify-content: center;
     padding: 0;
     transition: background-color 0.3s, transform 0.3s, color 0.3s;
@@ -644,4 +643,53 @@ header #search-button img {
 
 .modal-compra-body .btn:hover {
     background-color: #ff6b6b;
+}
+
+#produto-detalhe {
+    width: 100% !important; /* Mudei de vw para % */
+    max-width: 1200px !important; /* Adicione um limite máximo */
+    margin: 2rem auto !important; /* Margem superior/inferior e auto para centralizar */
+    background: #fff0f6 !important;
+    padding: 2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    display: flex; 
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: center; /* Centraliza horizontalmente os itens internos */
+}
+
+
+#produto-detalhe:hover {
+  background: #fff0f6; /* mesma cor: sem mudança */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* igual ao normal */
+  transform: none !important; /* caso esteja "pulando" ou animando */
+  
+}
+
+#produto-detalhe img{
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Limite máximo para a imagem */
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+  
+btn-outline-danger {
+    border: 2px solid #ff6b6b !important; /* Cor rosa do seu tema */
+    color: #ff6b6b !important; /* Cor do texto */
+    background-color: transparent !important;
+    font-family: 'Horizon', sans-serif !important; /* Fonte do seu site */
+    font-weight: bold !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Efeito hover (quando o mouse passa por cima) */
+.btn-outline-danger:hover {
+    background-color: #ff6b6b !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3) !important;
 }
